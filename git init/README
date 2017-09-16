@@ -1,0 +1,13 @@
+Connection connection;
+6	  while (true) {
+7	    connection=connections.get(remoteId);
+8	    if (connection == null) {
+…	
+12	        connection=existing;
+13	      }
+14	    }
+15	    if (connection.addCall(call)) {
+16	      break;
+17	    }
+18	 else {
+19	      connections.remove(remoteId,connection);
